@@ -48,8 +48,10 @@ h2. Uruchomienie projektu
 * Aby korzystać z aplikacji otwórz przeglądarkę internetową i wpisz w adres @http://localhost:3000/@.
 
 h2. Opis schemtatu pracy nad aplikacją
+
 * Przy rozpoczęciu pracy nad nową funkcjonalnością stwórz nową gałąź dla repozytorium: @git checkout -b feature_name@
 * Zmiany komituj na daną gałąź, nigdy do mastera!!!
+* Komentarze w commitach @MAJĄ BYĆ PISANE PO ANGIELSKU!!!@
 * Jeżeli chcesz wysłać gałąź na zdalne repozytorium wykonaj: @git push origin feature_name@
 
 h2. Przydatne linki
