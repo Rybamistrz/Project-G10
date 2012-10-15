@@ -29,9 +29,9 @@ Więcej informacji dostępne pod "adresem" : @http://git-scm.com/book/pl/Git-na-
 
 h3.  Instalowanie RVM z ruby on rails.
 
-* Instalacja bibliotek, wykonaj polecenie w  terminalu : @sudo apt-get install build-essential openssl libreadline6 libreadline6-dev
-  curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev
-  autoconf libc6-dev ncurses-dev automake libtool bison subversion@.
+* Instalacja bibliotek, wykonaj polecenie w  terminalu : @sudo apt-get install build-essential openssl libreadline6 libreadline6-dev@
+  @curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev@
+  @autoconf libc6-dev ncurses-dev automake libtool bison subversion@.
 * Instalowanie RVM, ruby z railsami : @curl -L https://get.rvm.io | bash -s stable --rails@.
 * Przeładowanie powłoki : @source ~/.rvm/scripts/rvm@.
 
