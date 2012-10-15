@@ -1,4 +1,62 @@
-h1. App description
+h1. Opis Aplikacji
+TODO: WYkonać opis
 
-h2. Requirements
+h2. Wymagania
+
+* ruby 1.9.3
+* git
+* sqlite 3
+* postgres 9.1+
+
+h2. Konfiguracja środowiska programistycznego
+
+h3.  Instalowanie **Git na naszym komputerze.
+
+Aby zainstalować Git postępujemy zgodnie instrukcją dostępną pod "adresem" : @http://git-scm.com/book/pl/Pierwsze-kroki-Instalacja-Git@. 
+
+h3.  Wstępna konfiguracja **Git.
+
+Po instalacji należy skonfigurować Git. Postępujemy zgodnie z instrukcjami dostępnymi pod "adresem" : @http://git-scm.com/book/pl/Pierwsze-kroki-Wstępna-konfiguracja-Git@.
+
+h3.  Stworzenie konta na **GITHUB.com.
+
+Aby stworzyć konto na GITHUB "wejdź na stronę" : @https://github.com/signup/free@.
+
+h3.  Wygenerewanie klucza SSH.
+
+Aby wygenerować klucz SSH postępuj sgodnie z "instrukcją" : @https://help.github.com/articles/generating-ssh-keys@.
+Więcej informacji dostępne pod "adresem" : @http://git-scm.com/book/pl/Git-na-serwerze@.
+
+h3.  Instalowanie RVM z ruby on rails.
+
+* Instalacja bibliotek, wykonaj polecenie w  terminalu : @sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion@.
+* Instalowanie RVM, ruby z railsami : @curl -L https://get.rvm.io | bash -s stable --rails@.
+* Przeładowanie powłoki : @source ~/.rvm/scripts/rvm@.
+
+h2. Kopiowanie projektu na GITHUB
+
+* Należy wejść na stronę "projektu" : @https://github.com/Rybamistrz/Project-G10@.
+* W prawym górnym rogu wybierz opcję **Fork.
+* W opcjach protokołów SSH|HTTP|Git Read-only| kliknij opcję SSH i skopiuj adres do showka (ctrl + c).
+* W terminalu uruchom polecenie @git clone url@ skopiowanie ze schowka.
+
+h2. Uruchomienie projektu
+
+* W katalogu z aplikacją należy w terminalu należy wpisać polecenie @bundle install@.
+* Następnie wykonaj polecenie importu migracji bazy danych : @rake db:migrate@.
+* Aby uruchomić serwer wykonaj polecenie @rais server@.
+* Aby korzystać z aplikacji otwórz przeglądarkę internetową i wpisz w adres @http://localhost:3000/@.
+
+h2. Opis schemtatu pracy nad aplikacją
+* Przy rozpoczęciu pracy nad nową funkcjonalnością stwórz nową gałąź dla repozytorium: @git checkout -b feature_name@
+* Zmiany komituj na daną gałąź, nigdy do mastera!!!
+* Jeżeli chcesz wysłać gałąź na zdalne repozytorium wykonaj: @git push origin feature_name@
+
+h2. Przydatne linki
+
+* Tutorial do gita: @http://git-scm.com/book/pl/@
+* Tutorial do rubiego: @http://ruby.learncodethehardway.org/book/@
+* Tutorial dla railsow: @http://apohllo.pl/guides/index.html@
+* Link to UI toolkita twitter bootsrap @http://twitter.github.com/bootstrap/index.html@
+* Tutorial jak pisać testy @https://www.relishapp.com/rspec/@
 
