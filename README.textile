@@ -10,15 +10,15 @@ h2. Wymagania
 
 h2. Konfiguracja środowiska programistycznego
 
-h3.  Instalowanie **Git na naszym komputerze.
+h3.  Instalowanie Git na naszym komputerze.
 
 Aby zainstalować Git postępujemy zgodnie instrukcją dostępną pod "adresem" : @http://git-scm.com/book/pl/Pierwsze-kroki-Instalacja-Git@. 
 
-h3.  Wstępna konfiguracja **Git.
+h3.  Wstępna konfiguracja Git.
 
 Po instalacji należy skonfigurować Git. Postępujemy zgodnie z instrukcjami dostępnymi pod "adresem" : @http://git-scm.com/book/pl/Pierwsze-kroki-Wstępna-konfiguracja-Git@.
 
-h3.  Stworzenie konta na **GITHUB.com.
+h3.  Stworzenie konta na GITHUB.com.
 
 Aby stworzyć konto na GITHUB "wejdź na stronę" : @https://github.com/signup/free@.
 
@@ -36,7 +36,7 @@ h3.  Instalowanie RVM z ruby on rails.
 h2. Kopiowanie projektu na GITHUB
 
 * Należy wejść na stronę "projektu" : @https://github.com/Rybamistrz/Project-G10@.
-* W prawym górnym rogu wybierz opcję **Fork.
+* W prawym górnym rogu wybierz opcję : @Fork@.
 * W opcjach protokołów SSH|HTTP|Git Read-only| kliknij opcję SSH i skopiuj adres do showka (ctrl + c).
 * W terminalu uruchom polecenie @git clone url@ skopiowanie ze schowka.
 
