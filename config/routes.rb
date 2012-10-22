@@ -1,4 +1,16 @@
 G10Rails::Application.routes.draw do
+  get "event/new"
+
+  get "event/create"
+
+  get "event/edit"
+
+  get "event/update"
+
+  get "event/destroy"
+
+  get "event/show"
+
   devise_for :users
 
   get "home/index"
