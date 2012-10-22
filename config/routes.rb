@@ -1,4 +1,6 @@
 G10Rails::Application.routes.draw do
+  resources :controllers
+
   resources :questions
 
   resources :votes
