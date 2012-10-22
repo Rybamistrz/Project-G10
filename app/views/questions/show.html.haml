@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Question:
+  = @question.question
+%p
+  %b Question vote fields:
+  = @question.question_vote_fields
+
+= link_to 'Edit', edit_question_path(@question)
+\|
+= link_to 'Back', questions_path
