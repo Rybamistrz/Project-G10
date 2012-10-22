@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Vote belongs to all:
+  = @vote.vote_belongs_to_all
+%p
+  %b Vote belongs to profesors:
+  = @vote.vote_belongs_to_profesors
+%p
+  %b Vote time:
+  = @vote.vote_time
+
+= link_to 'Edit', edit_vote_path(@vote)
+\|
+= link_to 'Back', votes_path

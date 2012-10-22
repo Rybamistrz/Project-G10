@@ -1,4 +1,6 @@
 G10Rails::Application.routes.draw do
+  resources :votes
+
   get "event/new"
 
   get "event/create"
