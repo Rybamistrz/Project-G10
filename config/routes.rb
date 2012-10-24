@@ -1,21 +1,7 @@
 G10Rails::Application.routes.draw do
-  resources :controllers
-
   resources :questions
-
   resources :votes
-
-  get "event/new"
-
-  get "event/create"
-
-  get "event/edit"
-
-  get "event/update"
-
-  get "event/destroy"
-
-  get "event/show"
+  resources :events
 
   devise_for :users
 
