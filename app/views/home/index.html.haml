@@ -1,2 +1,9 @@
 %h1 Home#index
 %p Find me in app/views/home/index.html.haml
+
+
+- content_for :sidebar do
+  %ul.nav.nav-list
+    %li
+      %i.icon-globe
+        = link_to 'New event', new_event_path
