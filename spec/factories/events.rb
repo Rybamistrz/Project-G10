@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :event do
-    event_name "MyString"
-    event_description "MyText"
-    event_localization "MyString"
+    sequence(:name) { |n| "Name #{n}" }
+    description "MyText"
+    place "MyString"
+    begin_at Time.now
   end
 end
