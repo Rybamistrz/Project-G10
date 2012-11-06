@@ -1,3 +1,9 @@
+.clear {
+  height: 1px;
+  clear: both;
+  overflow: hidden;
+}
+
 .navbar {
   .navbar-inner {
     border-radius: 0;
