@@ -1,18 +1,13 @@
 %h1 Wydarzenia
 
-%table
+%table.table.table-bordered
   %tr
-    %th Name
-    %th Description
-    %th Place
-    %th Begin at
+    %th Nazwa Wydarzenia
+    %th Lokalizacja
+    %th Data 
+    %th Szczegoly
+    %th 
+      = render :partial => "event", :collection => @events
 
-  - @events.each do |event|
-    %tr
-      %td= link_to 'Show', event
-      %td= link_to 'Edit', edit_event_path(event)
-      %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Event', new_event_path
+.form-actions
+  = link_to t("actions.Utworz Wydarzenie"), new_event_path, :class => 'btn btn-primary'

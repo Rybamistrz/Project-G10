@@ -1,9 +1,26 @@
 %p#notice= notice
 
+-#%p
+-#%table.table.table.bordered
+  -#%tr
+    -#%th Wydarzenie
+    -#%td= @event.name
+    -#%th Lokalizajca
+    -#%td= @event.place
+    -#%th Godzina
+    -#%td= @event.begin_at
 %p
-  %b Wydarzenie
-  = @event.name
+%table.table.table.bordered
+  %tr
+    %th
+    %th
+    %th
+    %th Opis
+    %th
+%p
+%table.table.table.bordered
+  %tr
+    %td= @event.description
 
-= link_to 'Edit', edit_event_path(@event)
-\|
-= link_to 'Back', events_path
+.form-actions
+  = link_to t("actions.Cofnij"), events_path, :class => "btn btn-primary"
