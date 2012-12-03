@@ -1,5 +1,13 @@
-%h1 Stworz Wydarzenie 
+.page-header
+  %h1 Stworz Wydarzenie 
 
 = render 'form'
 
--#= link_to 'Back', events_path
+- content_for :sidebar do
+  .page-header
+    %h2= t('defaults.header.sidebar')
+  %ul.nav
+    %li
+      = link_to  events_path do
+        %i.icon-backward
+        = t('default.actions.back')
