@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 #
 $ ->
-  height = $(document).height() - $('body .nav').height()
+  height = $(document).height() - $('body .nav').height() - 127
   $('body #page-wrapper').height(height)
