@@ -1,7 +1,7 @@
 .well
   = form_for @event, html: { class: 'form-horizontal' } do |f|
     - if @event.errors.any?
-      #error_explanation
+      .alert
         %h2= "#{pluralize(@event.errors.count, "Blad")} Zapis nie powiodl sie:"
         %ul
           - @event.errors.full_messages.each do |msg|
@@ -22,6 +22,6 @@
     .control-group
       = f.label :begin_at, class: 'control-label'
       .controls
-        = f.text_field :begin_at
+        = f.text_field :begin_at, class: 'datepicker'
     .form-actions
       = f.submit :class => "btn btn-primary"
