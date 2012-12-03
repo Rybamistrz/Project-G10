@@ -1,4 +1,6 @@
-%h1 Wydarzenia
+.page-header
+  %h1 Wydarzenia
+
 
 %table.table.table-bordered
   %tr
@@ -9,5 +11,12 @@
     %th 
       = render :partial => "event", :collection => @events
 
-.form-actions
-  = link_to t("actions.Utworz Wydarzenie"), new_event_path, :class => 'btn btn-primary'
+- content_for :sidebar do
+  .well
+    .page-header
+      %h2
+        = t('defaults.headers.sidebar')
+    %ul.nav
+      %li
+        %i.icon-plus
+        = link_to t("events.actions.create_new"), new_event_path
