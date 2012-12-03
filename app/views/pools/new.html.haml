@@ -1,0 +1,11 @@
+.page-header
+  %h1 New pool
+
+- content_for :sidebar do
+  .page-header
+    %h2= t('defaults.header.sidebar')
+  %ul.nav
+    %li
+      = link_to  event_path(@event) do
+        %i.icon-backward
+        = t('default.actions.back')

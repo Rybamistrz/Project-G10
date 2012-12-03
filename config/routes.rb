@@ -1,7 +1,7 @@
 G10Rails::Application.routes.draw do
-  resources :questions
-  resources :votes
-  resources :events
+  resources :events do
+    resources :pools, only: [:new, :create, :edit, :update, :destroy]
+  end
 
   devise_for :users
 

@@ -1,7 +1,7 @@
-%h1 Edycja Wydarzenia 
+.page-header
+  %h1 Edycja Wydarzenia 
 
 = render 'form'
 
--#= link_to 'Show', @event
-
--#= link_to 'Back', events_path
+- content_for :sidebar do
+  = render partial: 'shared/sidebar'
