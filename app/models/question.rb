@@ -1,3 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :question, :question_vote_fields
+  attr_accessible :content, :pool_id
+
+  belongs_to :pool
 end

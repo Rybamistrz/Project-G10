@@ -6,7 +6,7 @@
 .page-header
   %h1 Opcje głosowania
 
-- unless @event.pool.finished
+- if @event.pool && !@event.pool.finished
   .well
     = form_tag '', html: { css: 'form-horizontal' }  do
       - @event.pool.questions.each do |q|
@@ -19,19 +19,20 @@
   wyniki
 
 - content_for :sidebar do
-  .page-header
-    %h2= t('defaults.header.sidebar')
-  %ul.nav
-    %li
-      = link_to  events_path do
-        %i.icon-backward
-        = t('default.actions.back')
-    %li
-      - unless @event.pool.blank?
-        = link_to edit_event_pool_path(@event, @event.pool)  do
-          %i.icon-globe
-          = t('default.actions.update_pool')
-      - else
-        = link_to new_event_pool_path(@event) do
-          %i.icon-filter
-          = t('default.actions.create_pool')
+  .well
+    .page-header
+      %h2= t('defaults.header.sidebar')
+    %ul.nav
+      %li
+        = link_to  events_path do
+          %i.icon-backward
+          = t('default.actions.back')
+      %li
+        - unless @event.pool.blank?
+          = link_to edit_event_pool_path(@event, @event.pool)  do
+            %i.icon-globe
+            = t('default.actions.update_pool')
+        - else
+          = link_to new_event_pool_path(@event) do
+            %i.icon-filter
+            = t('default.actions.create_pool')

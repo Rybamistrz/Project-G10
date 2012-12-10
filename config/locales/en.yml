@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  views:
+    defaults:
+      update: "Update entry"
+      new: "Create entry"

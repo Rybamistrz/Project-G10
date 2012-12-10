@@ -1,0 +1,18 @@
+.well
+  = form_for @pool, url: event_pools_path(@event), html: { class: 'form-horizontal' } do |pool_form|
+    = pool_form.hidden_field :event_id, value: @event.id
+
+    .control-group
+      = pool_form.label :finished, class: "control-label"
+      .controls
+        = pool_form.check_box :finished
+
+    = pool_form.fields_for :questions do |builder|
+      .control-group
+        = builder.label :content, class: "control-label"
+        .controls
+          = builder.text_field :content
+    .form-actions
+      = pool_form.submit submit_label, class: 'btn btn-primary'
+
+

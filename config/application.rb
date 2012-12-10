@@ -71,3 +71,4 @@ module G10Rails
     end
   end
 end
+
