@@ -7,3 +7,5 @@ en:
     defaults:
       update: "Update entry"
       new: "Create entry"
+    events_show:
+      vote: "Vote"

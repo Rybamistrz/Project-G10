@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203205910) do
+ActiveRecord::Schema.define(:version => 20121210184900) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -55,11 +55,12 @@ ActiveRecord::Schema.define(:version => 20121203205910) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "votes", :force => true do |t|
-    t.string   "vote_belongs_to_all"
-    t.string   "vote_belongs_to_profesors"
-    t.time     "vote_time"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.time     "voted_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "pool_id"
+    t.integer  "question_id"
+    t.integer  "user_id"
   end
 
 end

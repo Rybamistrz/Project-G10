@@ -6,15 +6,19 @@
 .page-header
   %h1 Opcje głosowania
 
-- if @event.pool && !@event.pool.finished
+- if @event.pool && !@event.pool.voted?(current_user) && !@event.pool.finished
   .well
-    = form_tag '', html: { css: 'form-horizontal' }  do
+    = form_for @vote, url: event_pool_votes_path(@event, @event.pool), html: { class: 'form-horizontal' }  do |f|
       - @event.pool.questions.each do |q|
         .control-group
-          = label_tag :answear, q.content, class: "control-label"
+          = f.label :question_id, q.content, class: "control-label"
           .controls
-            = radio_button_tag :answear, q.id
+            = f.radio_button :question_id, q.id
+      .form-actions
+        = f.submit t('views.events_show.vote')
 
+- elsif @event.pool.voted?(current_user) && !@event.pool.finished
+  czekam na wynki
 - else
   wyniki
 

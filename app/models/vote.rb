@@ -1,3 +1,6 @@
 class Vote < ActiveRecord::Base
-  attr_accessible :vote_belongs_to_all, :vote_belongs_to_profesors, :vote_time
+  attr_accessible :voted_at, :user_id, :pool_id, :question_id
+
+  validates_uniqueness_of :pool_id, scope: :user_id
 end
+

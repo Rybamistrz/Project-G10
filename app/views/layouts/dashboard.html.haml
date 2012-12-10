@@ -21,6 +21,9 @@
     .container#page-wrapper
       .row
         .span8
+          - [:success, :error].each do |type|
+            - if flash[type]
+              .alert{ class: "alert-#{type}"}= flash[type]
           = yield
         .span4= yield(:sidebar)
         .clear
