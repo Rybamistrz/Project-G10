@@ -6,6 +6,18 @@
 .page-header
   %h1 Opcje głosowania
 
+- unless @event.pool.finished
+  .well
+    = form_tag '', html: { css: 'form-horizontal' }  do
+      - @event.pool.questions.each do |q|
+        .control-group
+          = label_tag :answear, q.content, class: "control-label"
+          .controls
+            = radio_button_tag :answear, q.id
+
+- else
+  wyniki
+
 - content_for :sidebar do
   .page-header
     %h2= t('defaults.header.sidebar')
