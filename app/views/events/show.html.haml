@@ -17,9 +17,9 @@
       .form-actions
         = f.submit t('views.events_show.vote')
 
-- elsif @event.pool.voted?(current_user) && !@event.pool.finished
+- elsif @event.pool && @event.pool.voted?(current_user) && !@event.pool.finished
   czekam na wynki
-- else
+- elsif @event.pool && @event.pool.finished
   #chart{ data: { results: @event.pool.chart_data.to_json, event_title: @event.name } }
 
 - content_for :sidebar do
